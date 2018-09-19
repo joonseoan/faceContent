@@ -19,14 +19,6 @@ class InputComponent extends Component {
     });
   };
 
-  // handleRadio = e => {
-  //   console.log(e.target.name, ":", e.target.value);
-
-  //   this.setState({
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
-
   handleSubmit = e => {
     const { user } = this.props;
 
