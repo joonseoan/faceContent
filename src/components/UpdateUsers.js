@@ -12,6 +12,10 @@ class UpdateUsers extends Component {
     this.setState({
       update: !update
     });
+
+    onUpdate(user, update);
+
+    console.log(user, update);
   };
 
   render() {

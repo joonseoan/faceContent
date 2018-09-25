@@ -7,7 +7,8 @@ class App extends Component {
   id = 0;
 
   state = {
-    users: []
+    users: [],
+    update: false
   };
 
   addUsers = userState => {

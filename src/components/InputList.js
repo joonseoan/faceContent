@@ -1,25 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 
 import DeleteUsers from "components/DeleteUsers";
 import UpdateUsers from "components/UpdateUsers";
 
-class InputList extends Component {
-  style = {
+const InputList = props => {
+  const style = {
     border: "1px solid",
     marginBottom: "1rem",
     width: "300px"
   };
 
-  handleData = () => {
-    const { userList, toDelete, toUpdate } = this.props;
+  const { userList, toDelete, toUpdate } = props;
 
-    console.log(this.props);
+  const handleData = () => {
+    console.log(props);
 
     return userList.map(user => {
       const { name, email, comment, likeDislike } = user;
 
       return (
-        <div key={user.id} style={this.style}>
+        <div key={user.id} style={style}>
           <div>name: {name}</div>
           <div>email: {email}</div>
           <div>comment: {comment}</div>
@@ -31,9 +31,7 @@ class InputList extends Component {
     });
   };
 
-  render() {
-    return <div>{this.handleData()}</div>;
-  }
-}
+  return <div>{handleData()}</div>;
+};
 
 export default InputList;
